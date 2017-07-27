@@ -19,6 +19,9 @@ rmv use
 # Install necessary gems
 gem install
 
+# Init datebase
+rake db:create && rake db:migrate
+
 # Start dev server
 rails s
 ```
