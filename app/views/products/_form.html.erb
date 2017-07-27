@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :product_description, required: true, maxlength: 150 %>
+    <%= form.text_field :description, id: :product_description, required: true, pattern: '.{10,150}', title: '10 to 150 characters' %>
   </div>
 
   <div class="field">
