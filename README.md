@@ -21,7 +21,7 @@ rmv use
 # Install necessary gems
 gem install
 
-# Init datebase
+# Init database
 rake db:create && rake db:migrate
 
 # Seed some test data
