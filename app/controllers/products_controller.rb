@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.where(user_id: current_user.id)
+    @products = current_user.products
     unless params[:name].blank?
       @products = @products.where(
         'LOWER(name) LIKE LOWER(?)',
