@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+3.times do
+  user = User.create!(email: Faker::Internet.email, password: '123456')
+
+  5.times do
+    Product.create!(
+      user: user,
+      name: Faker::Lorem.word,
+      description: Faker::Lorem.sentence,
+      qty: Faker::Number.between(1, 100),
+      color: (Product.colors.keys.sample if Faker::Boolean.boolean),
+      unit: Product.units.keys.sample
+    )
+  end
+
+  puts "User created: #{user.email} with password `123456`"
+end

@@ -22,6 +22,9 @@ gem install
 # Init datebase
 rake db:create && rake db:migrate
 
+# Seed some test data
+rake db:seed
+
 # Start dev server
 rails s
 ```
