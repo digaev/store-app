@@ -8,6 +8,8 @@
 ## Usage
 
 ```bash
+git clone https://github.com/digaev/store-app.git
+
 cd store-app
 
 # Install bower components
